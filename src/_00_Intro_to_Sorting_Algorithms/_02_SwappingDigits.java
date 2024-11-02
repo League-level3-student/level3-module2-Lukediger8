@@ -5,7 +5,11 @@ class _02_SwappingDigits {
     // 1. Complete the method so that the first two elements of the array are
     //    swapped.
     public static void swapArrayOfTwo(int[] arr) {
-
+    	   for (int k = 0; k < arr.length - 1; k++) {
+    		   int temp = arr[k];
+               arr[k] = arr[ k+1 ];
+               arr[ k+1 ] = temp;
+    	   }
     }
 
     // 2. Complete the method so that it sorts the array using a bubble sort.
