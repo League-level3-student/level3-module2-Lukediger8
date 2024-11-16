@@ -43,6 +43,14 @@ public class _01_SortedArrayChecker {
 	 * method returns true if the character array is in alphabetical order and false
 	 * otherwise (You can compare characters just like integers).
 	 */
+	public static boolean charArraySorted(char[] arr) {
+        for (int i = 0; i < arr.length - 1; i++) {
+            if (arr[i + 1] < arr[i]) {
+                return false; 
+            }
+        }
+        return true; 
+    }
 	/*
 	 * 4. Write a static method called stringArraySorted.
 	 *
@@ -50,5 +58,13 @@ public class _01_SortedArrayChecker {
 	 * returns true if the String array is in alphabetical order and false otherwise
 	 * (Use the compareTo(String) method).
 	 */
-
+	public static boolean stringArraySorted(String[] arr) {
+		   for (int i = 0; i < arr.length - 1; i++) {
+	            if (arr[i].compareTo(arr[i + 1]) > 0) {
+	                return false; 
+	            }
+	        }
+	        return true;
+	}
 }
+
