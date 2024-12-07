@@ -20,6 +20,7 @@ class _03_SearchTest {
     public void testBinarySearch() {
         // 2. Use the assertEquals() method to test your binary search method
         //    remember that the array must be sorted
-        assertEquals(false, true);
+    int arr[] = {1,3,4,7,8,9,11};
+    assertEquals(binarySearch(arr, 0, arr.length, 4),2);
     }
 }
