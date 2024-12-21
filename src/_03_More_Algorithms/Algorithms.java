@@ -7,11 +7,29 @@ import java.util.List;
  */
 public class Algorithms {
     
-    public static String multiply(int num1, int num2) {
+	  public static boolean isPrime(int num) {
+	    	for(int i = 2; i <= (int)num/2; i++) {
+	    		if(num%i == 0) {
+	    			return false;
+	    		}
+	    	}
+	    	return true;
+	  }
+	  
+	  public static boolean isSquare(int num) {
+	    	for(int i = 2; i <= (int)num/2; i++) {
+	    		if(num/i == i) {
+	    			return true;
+	    		}
+	    	}
+	    	return false;
+	  }
+	
+	public static String multiply(int num1, int num2) {
         return null;
     }
     
-    public static int findBrokenEgg(List<String> eggs) {
+    public static int findBrokenEgg(List<String> eggs) {	
         return 0;
     }
 }

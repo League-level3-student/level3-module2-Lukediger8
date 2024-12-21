@@ -13,14 +13,16 @@ class _03_SearchTest {
     @Test
     public void testLinearSearch() {
         // 1. Use the assertEquals() method to test your linear search method
-        assertEquals(false, true);
+    	String arr[] = {"1","3","4","7","8","9","11"};
+	    assertEquals(_01_LinearSearch.linearSearch(arr, "4"),2);
     }
 
     @Test
     public void testBinarySearch() {
         // 2. Use the assertEquals() method to test your binary search method
         //    remember that the array must be sorted
-    int arr[] = {1,3,4,7,8,9,11};
-    assertEquals(binarySearch(arr, 0, arr.length, 4),2);
-    }
+    	
+	    int arr[] = {1,3,4,7,8,9,11};
+	    assertEquals(_02_BinarySearch.binarySearch(arr, 0, arr.length-1, 4),2);
+	    }
 }
