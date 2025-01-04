@@ -1,12 +1,14 @@
 package _00_Intro_to_Sorting_Algorithms;
 
+import java.util.Random;
+
 import processing.core.PApplet;
 
 /*
  * Goal: Create a program that sorts each rectangle by height!
  * 
  * 1. Create an array of ints. Do not initialize it.
-  
+ *
  *In the settings() method:
  * 2. Set the size of your window to at least 500 width 500 height
  * 
@@ -41,7 +43,7 @@ public class _03_VisualArraySorter extends PApplet {
     static final int WIDTH = 600;
     static final int HEIGHT = 400;
     int[] arr;
-
+    Random rand = new Random();
     @Override
     public void settings() {
         size(500,500);
@@ -49,11 +51,24 @@ public class _03_VisualArraySorter extends PApplet {
 
     @Override
     public void setup() {
+        arr = new int[50];
+        randomizeInts();
+        noStroke();
         
     }
 
+	private void randomizeInts() {
+		for(int i = 0; i < 50; i++) {
+        	arr[i] = rand.nextInt(500);
+        
+        }
+	} 
+
+
     @Override
     public void draw() {
+        background(255,255,255);
+        fill(255,255,255);
         
     }
 
