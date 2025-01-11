@@ -68,10 +68,16 @@ public class _03_VisualArraySorter extends PApplet {
     @Override
     public void draw() {
         background(255,255,255);
-        fill(255,255,255);
-        
+        fill(0,0,0);
+        for (int i = 0; i < arr.length; i++) {
+        	rect(i*(width/arr.length),HEIGHT,(width/arr.length),-arr[i]);
+        }
+        stepSort(arr);
+        if (mousePressed) {
+        	randomizeInts();
+        }
     }
-
+    
     static public void main(String[] passedArgs) {
         PApplet.main(_03_VisualArraySorter.class.getName());
     }
@@ -92,5 +98,22 @@ public class _03_VisualArraySorter extends PApplet {
         }
       }
       startIndex = 1;
+    }
+    
+    void bubbleSort(int[] arr) {
+    	for (int j = 0; j < arr.length - 1; j++) {
+            // Compare adjacent elements
+            if (arr[j] > arr[j + 1]) {
+                // Swap the elements if they are in the wrong order
+                int temp = arr[j];
+                arr[j] = arr[j + 1];
+                arr[j + 1] = temp;
+                
+            }
+        }
+    }
+    
+    void binarySort(int[] arr) {
+    	
     }
 }
