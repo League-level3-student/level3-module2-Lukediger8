@@ -55,7 +55,7 @@ public class _00_JavaClassSortDemo {
         // Sort list in place, not need to save output in a return variable
         Collections.sort(doubleList);
         
-        System.out.println("Sorted ArrayList using the Collections class:");p.
+        System.out.println("Sorted ArrayList using the Collections class:");
         
         
         for( Double i : doubleList ) {
