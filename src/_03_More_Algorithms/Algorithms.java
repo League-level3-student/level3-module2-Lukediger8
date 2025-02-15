@@ -1,4 +1,4 @@
-package _03_More_Algorithms;
+ package _03_More_Algorithms;
 
 import static org.junit.Assert.assertEquals;
 
@@ -64,6 +64,27 @@ public class Algorithms {
 		}
 		return tallest;
 	}
+
+	public static boolean isCube(int num) {
+		// TODO Auto-generated method stub
+		for(int i = 1; i<=num; i++) {
+    		if(i*i*i == num) {
+    			return true;
+	}
+		}
+	return false;
+	}
+
+	public static Object findLongestWord(List<String> words) {
+		String woah = "";
+		for(int i = 0; i<words.size(); i++) {
+    		if(words.get(i).length()>woah.length()) {
+    			woah = words.get(i);
+    		}
+    	}
+        return woah;
+    }
+
 }
 		
 		
