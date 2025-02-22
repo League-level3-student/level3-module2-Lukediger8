@@ -2,6 +2,7 @@
 
 import static org.junit.Assert.assertEquals;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
@@ -85,7 +86,41 @@ public class Algorithms {
         return woah;
     }
 
+	public static Object containsSOS(List<String> message2) {
+		for(int i = 0; i<message2.size(); i++) {
+			if(message2.get(i).contains("... --- ...")) {
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public static List<Double> sortScores(List<Double> results) {
+		Double small;
+		ArrayList<Double> scores = new ArrayList<Double>();
+		for(int i = 0; i< results.size(); i++) {
+			small = 100.0;
+			for(int j = 0; j < results.size(); j++) {
+				if (!(scores.contains(results.get(j))) && results.get(j) < small){
+					small = results.get(j);
+				}
+				
+			}
+			scores.add(small);
+			System.out.println(scores);
+			
+			
+		}
+		return scores;
+		
+	}
 }
+				
+	
+	
+	
+
+
 		
 		
 	
