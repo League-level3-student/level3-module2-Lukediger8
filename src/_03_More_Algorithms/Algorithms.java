@@ -114,6 +114,21 @@ public class Algorithms {
 		return scores;
 		
 	}
+
+	public static Object sortDNA(List<String> unsortedSequences) {
+		// TODO Auto-generated method stub
+		for(int i = 0; i < unsortedSequences.size(); i++) {
+			for (int j = 0; j < unsortedSequences.size() - 1 - i; j++) {
+				if (unsortedSequences.get(j).length() > unsortedSequences.get(j + 1).length()) {
+					String temp = unsortedSequences.get(j);
+					unsortedSequences.set(j,unsortedSequences.get(j+1)); 
+					unsortedSequences.set(j+1,temp);
+				}
+			}
+		
+	}
+		return unsortedSequences;
+}
 }
 				
 	
