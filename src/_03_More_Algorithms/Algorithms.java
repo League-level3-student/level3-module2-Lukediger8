@@ -129,7 +129,23 @@ public class Algorithms {
 	}
 		return unsortedSequences;
 }
+
+	
+	public static List<String> sortWords(List<String> words) {
+		// TODO Auto-generated method stub
+		for(int  i = 0; i < words.size();i++) {
+			for(int j = 0; j < words.size() - 1 - i;j++) {
+				if (words.get(j).compareTo(words.get(j+1)) > 0) {
+					String temp = words.get(j);
+					words.set(j, words.get(j+1));
+					words.set(j+1, temp);
+				}
+			}
+		}
+		return words;
+	}
 }
+
 				
 	
 	
